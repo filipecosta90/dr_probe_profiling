@@ -1,0 +1,32 @@
+'/Users/filipeoliveira/Desktop/CeO2_b/wav/wave_sl.wav'		! Wave function file name string used to locate existing wave functions. Use quotation marks to secure the input including space characters.
+444, 444		! Dimension of the wave data in pixels, <nx> = number of horizontal wave pixels, <ny>  = number of vertical wave pixels.
+0.009, 0.009		! Sampling rate of the wave data (<sx> = horizontal, <sy> = vertical) [nm/pix].
+300		! TEM high-tension as used for wave function calculation [kV].
+0		! Image output type option: 0 = TEM image
+'/Users/filipeoliveira/Desktop/CeO2_b/dat/image.dat'		! Image output file name string. Use quotation marks to secure the input including space characters.
+444, 444		! Image output size (<ix> = horizontal , <iy> = vertical) in number of pixels.
+0, 1, 1, 0		! Flag and parameters for creating integer images with optional noise. Flag <intflg> 0 = off (default)
+0	! Flag activating the extraction of a special image frame (0=OFF, 1=ON).
+0.009	! Image output sampling rate [nm/pix], isotropic. The parameter is used only if the Flag in line 09 is set to 1.
+0, 0 !
+0 !
+1	! Coherence calculation model switch: 1 = averaging of coherent sub images explicit focal variation but quasi-coherent spatial envelope, 2 = averaging of coherent sub images with explicit focal and angular variation, 3 = quasi-coherent linear envelopes, 4 = Fourier-space synthesis with partially coherent TCC, 5: averaging of coherent sub images with explicit focal, angular, and frozen lattice variation)
+1, 3.5		! Flag and parameters for partial temporal coherence: <ptcflg> = flag (0=OFF, 1=ON), <f-spread> = focus spread (1/e) half width [nm]
+1, 0.2		! Flag and parameters for partial spatial coherence: <pscflg> = flag (0=OFF, 1=ON), <s-conv> = beam convergence (1/e) half width [mrad]
+1, 1, '/Users/filipeoliveira/Documents/im2model/simulation/mtf/MTF-US2k-300.mtf'		! Flag and parameters for applying the detector MTF: <mtfflag> = flag (0=OFF, 1=ON), <mtf-scale> = calculation scale of the mtf = (sampling rate experiment)/(sampling rate simulation), <mtf-file> = File name string to locate the MTF data. Use quotation marks to secure the input including space characters.
+1, 0.02	! Flag and parameters for a vibration envelope: <vibflg> = flag (0=OFF, 1=ON), <vibprm> = vibration RMS amplitude [nm].
+1	! Number of aberration definitions following this line
+5, -15000, 0		! aberration definition (index, ax, ay) [nm]
+5500		! Objective aperture radius [mrad]. Set to very large values to deactivate.
+0, 0		! Center of the objective aperture with respect to the zero beam [mrad].
+2		! Number variable of loop definitions following below.
+1 !
+1 !
+1 !
+-10, 10, 5 !
+'foc' !
+3 !
+1 !
+1 !
+29, 91, 6 !
+'_sl' !
