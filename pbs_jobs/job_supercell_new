@@ -30,15 +30,11 @@
 
 #PBS -l nodes=1:ppn=24
 
-export LD_LIBRARY_PATH=$HOME/lib/glibc-2.14/build:$LD_LIBRARY_PATH
-
-cd /home/a57816/perf_dr_probe
-
+cd /home/a57816/drprobe_clt_profilling
 read -r node_info<$PBS_NODEFILE
-
 echo "Allocated computing node: $node_info"
 
-perf record --output="supercell_8_8_18" -F 99 /home/a57816/im2model/simulation/dr_probe_bin/drprobe_clt_bin_linuxx64/celslc -cif /home/a57816/im2model/simulation/cif/CeO2.cif -slc /home/a57816/perf_dr_probe/slc/test -nx 888 -ny 888 -ht 300 -prj -2,-1,-1,-1,-2.46,-0.46,8,8,18 -nz 0
+perf record --output="supercell_celslc_8_8_18" -F 99 /home/a57816/drprobe_clt/celslc/src/celslc -cel /home/a57816/drprobe_clt_profilling/cif/CeO2_cub.cif -slc /home/a57816/drprobe_clt_profilling/slc/test_CeO2_cub -nx 888 -ny 888 -ht 300 -prj 0,0,1,0,1,0,8,8,18 -nz 0 
 
 echo "Done..."
 
