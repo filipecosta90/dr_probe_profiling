@@ -1,0 +1,2 @@
+[ perf record: Woken up 15 times to write data ]
+[ perf record: Captured and wrote 3.854 MB celslc_CeO2_cub_8_8_18 (~168366 samples) ]
