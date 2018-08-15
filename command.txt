@@ -1,0 +1,1 @@
+Command: /home/a57816/im2model/simulation/dr_probe_bin/drprobe_clt_bin_linuxx64/celslc -cif /home/a57816/im2model/simulation/cif/CeO2.cif -slc /home/a57816/perf_dr_probe/slc/test -nx 222 -ny 222 -ht 300 -prj -2,-1,-1,-1,-2.46,-0.46,2,2,18 -nz 0
