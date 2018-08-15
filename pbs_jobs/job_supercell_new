@@ -36,7 +36,7 @@ cd /home/a57816/drprobe_clt_profiling
 read -r node_info<$PBS_NODEFILE
 echo "Allocated computing node: $node_info"
 
-perf record --output="celslc_CeO2_cub_8_8_18" -F 99 /home/a57816/drprobe_clt/celslc/src/celslc -cif /home/a57816/drprobe_clt_profiling/cif/CeO2_cub.cif -slc /home/a57816/drprobe_clt_profiling/slc/test_CeO2_cub -nx 888 -ny 888 -ht 300 -prj 0,0,1,0,1,0,8,8,18 -nz 0 
+perf record -g --output="perf_g_celslc_CeO2_cub_8_8_18" -F 99 /home/a57816/drprobe_clt/celslc/src/celslc -cif /home/a57816/drprobe_clt_profiling/cif/CeO2_cub.cif -slc /home/a57816/drprobe_clt_profiling/slc/test_CeO2_cub -nx 888 -ny 888 -ht 300 -prj 0,0,1,0,1,0,8,8,18 -nz 0 
 
 echo "Done..."
 
